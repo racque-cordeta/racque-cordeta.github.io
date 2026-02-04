@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Racque Cordeta | Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <i class="fa-brands fa-facebook text-primary logo"></i>
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search Facebook">
+            </div>
+        </div>
+
+
+        <div class="nav-middle">
+            <div class="nav-tab active">
+                <i class="fa-solid fa-house"></i>
+            </div>
+            <div class="nav-tab">
+                <i class="fa-solid fa-user-group"></i>
+            </div>
+            <div class="nav-tab">
+                <i class="fa-solid fa-shop"></i>
+            </div>
+            <div class="nav-tab">
+                 <i class="fa-solid fa-gamepad"></i>
+            </div>
+        </div>
+
+
+        <div class="nav-right">
+            <div class="nav-icon">
+                <i class="fa-solid fa-list-ul"></i>
+            </div>
+            <div class="nav-icon">
+                <i class="fa-brands fa-facebook-messenger"></i>
+            </div>
+            <div class="nav-icon">
+                <i class="fa-solid fa-bell"></i>
+            </div>
+             <img src="https://pbs.twimg.com/profile_images/1919689960548139008/KESdylXb_400x400.jpg" alt="My Profile" class="nav-profile-img">
+        </div>
+    </nav>
+
+
+
+
+    <div class="main-container">
+
+
+        <aside class="left-sidebar">
+            <div class="sidebar-menu-item">
+                <img src="https://pbs.twimg.com/profile_images/1919689960548139008/KESdylXb_400x400.jpg" alt="Profile">
+                <span>Racque Cordeta</span>
+            </div>
+            <div class="sidebar-menu-item">
+                <i class="fa-solid fa-user-group text-primary icon-large"></i>
+                <span>Friends</span>
+            </div>
+            <div class="sidebar-menu-item">
+                <i class="fa-solid fa-shop text-primary icon-large"></i>
+                <span>Marketplace</span>
+            </div>
+            <div class="sidebar-menu-item">
+                 <i class="fa-solid fa-clock-rotate-left text-primary icon-large"></i>
+                <span>Memories</span>
+            </div>
+            <hr>
+            <h3>Your Shortcuts</h3>
+            <div class="sidebar-menu-item">
+                <i class="fa-solid fa-code icon-large"></i>
+                <span>Web Dev Group</span>
+            </div>
+        </aside>
+
+
+
+
+        <main class="feed-container">
+           
+            <div class="card create-post-box">
+                <div class="create-input-row">
+                    <img src="https://pbs.twimg.com/profile_images/1919689960548139008/KESdylXb_400x400.jpg" alt="Profile">
+                    <input type="text" id="postInput" placeholder="What's on your mind, Rac?">
+                </div>
+                <hr>
+                <div class="create-actions">
+                    <div class="action-item red">
+                      <img height="24" width="24" alt="Live Video" referrerpolicy="origin-when-cross-origin" src="https://static.xx.fbcdn.net/rsrc.php/yE/r/f0XMdTi7eQy.webp?_nc_eui2=AeGi6IOToUICSd9U_S7hE1wBWOK2rF8KwnxY4rasXwrCfBin_BbccdrsruOGgnsrOZwLH8jHUYAyGS6HDu8WA1Pt">
+                        <!-- <i class="fa-solid fa-video"></i>  -->
+                        Live Video
+                    </div>
+                    <div class="action-item green">
+                        <img height="24" width="24" alt="Photo/Video" referrerpolicy="origin-when-cross-origin" src="https://static.xx.fbcdn.net/rsrc.php/yX/r/8_VnccIZfRa.webp?_nc_eui2=AeHKK1CouXdC0YlP200mEfhdtIBijxuqePS0gGKPG6p49Aedg6MwABmBpTTbxZGVhEbv0W0pKsjiRVDOx-S-wEPP">
+                        <!-- <i class="fa-solid fa-images"></i> -->
+                         Photo/Video
+                    </div>
+                    <div class="action-item green">
+                    <img height="24" width="24" alt="Reel" referrerpolicy="origin-when-cross-origin" src="https://static.xx.fbcdn.net/rsrc.php/yb/r/DgIQti9Y0Xv.webp?_nc_eui2=AeEVtR0OGJCkhPMTFNolqQhVvMZPo5gB3n68xk-jmAHefq0xMVmYnkxaXvChkELoVtn_--pgYQ2chmspMHntDbbN">
+                    Reel
+                    </div>
+                    <button id="postBtn" class="post-submit-btn">Post</button>
+                </div>
+            </div>
+
+
+            <div id="feedStream">
+
+
+                <div class="card post">
+                    <div class="post-header">
+                        <div class="post-author-info">
+                            <img src="https://i.pravatar.cc/150?img=12" alt="Author">
+                            <div>
+                                <h4 class="author-name">Sarah Jenkins</h4>
+                                <span class="timestamp">2 hours ago · <i class="fa-solid fa-earth-americas"></i></span>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                    <div class="post-content">
+                        <p>Beautiful day for a hike! The views up here are incredible. 🏔️🌲</p>
+                        <img src="https://picsum.photos/id/1018/600/400" alt="Post Image" class="post-img">
+                    </div>
+                    <div class="post-stats">
+                        <span>Isabella and 45 others liked this</span>
+                        <span>12 comments</span>
+                    </div>
+                    <hr>
+                    <div class="post-actions-row">
+                        <div class="action-btn like-btn">
+                            <i class="fa-regular fa-thumbs-up icon"></i> Like
+                        </div>
+                        <div class="action-btn">
+                            <i class="fa-regular fa-message"></i> Comment
+                        </div>
+                        <div class="action-btn">
+                            <i class="fa-solid fa-share"></i> Share
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="card post">
+                    <div class="post-header">
+                        <div class="post-author-info">
+                            <img src="https://i.pravatar.cc/150?img=33" alt="Author">
+                            <div>
+                                <h4 class="author-name">Mike Chen</h4>
+                                <span class="timestamp">Yesterday at 10:30 AM · <i class="fa-solid fa-earth-americas"></i></span>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                    <div class="post-content">
+                        <p>Just finished building my first React app. It was tougher than I thought, but feels great to see it working!</p>
+                    </div>
+                    <div class="post-stats">
+                        <span>You and 92 others liked this</span>
+                        <span>24 comments</span>
+                    </div>
+                    <hr>
+                    <div class="post-actions-row">
+                         <div class="action-btn like-btn liked">
+                            <i class="fa-solid fa-thumbs-up icon"></i> Like
+                        </div>
+                        <div class="action-btn">
+                            <i class="fa-regular fa-message"></i> Comment
+                        </div>
+                        <div class="action-btn">
+                            <i class="fa-solid fa-share"></i> Share
+                        </div>
+                    </div>
+                </div>
+
+
+            </div> </main>
+
+
+
+
+        <aside class="right-sidebar">
+            <h3>Contacts</h3>
+            <div class="contact-item">
+                <div class="contact-img-wrap online">
+                     <img src="https://i.pravatar.cc/150?img=41" alt="Contact">
+                </div>
+                <span>Jessica Williams</span>
+            </div>
+            <div class="contact-item">
+                <div class="contact-img-wrap online">
+                     <img src="https://i.pravatar.cc/150?img=52" alt="Contact">
+                </div>
+                <span>David Smith</span>
+            </div>
+            <div class="contact-item">
+                 <div class="contact-img-wrap">
+                     <img src="https://i.pravatar.cc/150?img=23" alt="Contact">
+                </div>
+                <span>Emily Johnson</span>
+            </div>
+        </aside>
+
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
