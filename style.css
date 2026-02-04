@@ -1,0 +1,225 @@
+/* --- CSS Variables & Reset --- */
+:root {
+    --bg-color: #f0f2f5;
+    --text-color: #050505;
+    --secondary-text: #65676b;
+    --primary-color: #1877f2; /* FB Blue */
+    --card-bg: #ffffff;
+    --nav-height: 60px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding-top: var(--nav-height);
+}
+
+/* --- Utilities --- */
+.text-primary { color: var(--primary-color); }
+.red { color: #f3425f; }
+.green { color: #45bd62; }
+img { max-width: 100%; }
+
+/* --- NAVBAR STYLES --- */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--nav-height);
+    background-color: var(--card-bg);
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 100;
+}
+
+.nav-left, .nav-middle, .nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.logo { font-size: 40px; margin-right: 10px;}
+
+.search-box {
+    background-color: var(--bg-color);
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+.search-box input {
+    background: transparent;
+    border: none;
+    outline: none;
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.nav-middle { flex: 1; justify-content: center; }
+
+.nav-tab {
+    padding: 10px 30px;
+    font-size: 22px;
+    color: var(--secondary-text);
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+}
+.nav-tab.active {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+}
+.nav-tab:hover:not(.active) {
+    background-color: var(--bg-color);
+    border-radius: 8px;
+}
+
+.nav-right { gap: 10px; }
+.nav-icon {
+    width: 40px; height: 40px;
+    background-color: var(--bg-color);
+    border-radius: 50%;
+    display: flex; justify-content: center; align-items: center;
+    font-size: 18px;
+    cursor: pointer;
+}
+.nav-profile-img {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* --- MAIN LAYOUT GRID --- */
+.main-container {
+    display: grid;
+    /* The classic 1/4 - 1/2 - 1/4 layout ratio */
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 25px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* Make Sidebars "Sticky" so they stay put while feed scrolls */
+.left-sidebar, .right-sidebar {
+    position: sticky;
+    top: calc(var(--nav-height) + 20px);
+    height: calc(100vh - var(--nav-height) - 40px);
+    overflow-y: auto;
+}
+
+@media (max-width: 900px) {
+    .main-container { grid-template-columns: 1fr; }
+    .left-sidebar, .right-sidebar, .nav-middle { display: none; }
+}
+
+
+/* --- COMPONENTS STYLES --- */
+
+/* Generic Card Style */
+.card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+/* Sidebar Items */
+.sidebar-menu-item {
+    display: flex; align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.sidebar-menu-item:hover { background-color: #e4e6e9; }
+.sidebar-menu-item img {
+    width: 35px; height: 35px; border-radius: 50%; margin-right: 15px;
+}
+.icon-large { font-size: 24px; margin-right: 15px; width: 35px; text-align: center;}
+
+/* Create Post Box */
+.create-input-row { display: flex; align-items: center; margin-bottom: 15px; }
+.create-input-row img { width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;}
+.create-input-row input {
+    flex: 1;
+    background-color: var(--bg-color);
+    border: none; outline: none;
+    padding: 12px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+}
+.create-actions { display: flex; justify-content: space-between; margin-top: 15px;}
+.action-item {
+    flex: 1; display: flex; justify-content: center; align-items: center;
+    padding: 8px; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--secondary-text);
+}
+.action-item:hover { background-color: var(--bg-color); }
+.action-item i { margin-right: 8px; font-size: 20px; }
+
+.post-submit-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 25px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.post-submit-btn:hover { background-color: #1567d3; }
+
+
+/* Post Styles */
+.post-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;}
+.post-author-info { display: flex; align-items: center; }
+.post-author-info img { width: 40px; height: 40px; border-radius: 50%; margin-right: 10px; }
+.author-name { font-size: 16px; margin-bottom: 3px; }
+.timestamp { font-size: 13px; color: var(--secondary-text); }
+.post-content p { font-size: 15px; margin-bottom: 15px; }
+.post-img { width: 100%; border-radius: 8px; }
+.post-stats {
+    display: flex; justify-content: space-between;
+    color: var(--secondary-text); font-size: 14px;
+    padding: 10px 0;
+}
+.post-actions-row { display: flex; justify-content: space-around; margin-top: 5px; }
+.action-btn {
+    flex: 1; display: flex; justify-content: center; align-items: center;
+    padding: 8px; border-radius: 6px; cursor: pointer;
+    color: var(--secondary-text); font-weight: 600;
+}
+.action-btn:hover { background-color: var(--bg-color); }
+.action-btn .icon { margin-right: 8px; font-size: 18px; }
+
+/* JS Interaction Styles for Like Button */
+.liked {
+    color: var(--primary-color) !important;
+}
+
+/* Right Sidebar Contacts */
+.contact-item {
+    display: flex; align-items: center;
+    padding: 10px; border-radius: 8px; cursor: pointer;
+}
+.contact-item:hover { background-color: #e4e6e9; }
+.contact-img-wrap { position: relative; margin-right: 15px;}
+.contact-img-wrap img { width: 35px; height: 35px; border-radius: 50%; }
+.online::after {
+    content: '';
+    position: absolute;
+    bottom: 0; right: 0;
+    width: 10px; height: 10px;
+    background-color: #31a24c;
+    border: 2px solid var(--card-bg);
+    border-radius: 50%;
+}
