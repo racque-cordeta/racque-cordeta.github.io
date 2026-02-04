@@ -30,7 +30,7 @@
     <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">3</span></button>    
     <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
       <a href="#" class="w3-bar-item w3-button">One new friend request</a>
-      <a href="#" class="w3-bar-item w3-button">John Doe posted on your wall</a>
+      <a href="#" class="w3-bar-item w3-button">Racque Cordeta posted on your wall</a>
       <a href="#" class="w3-bar-item w3-button">Jane likes your post</a>
     </div>
   </div>
@@ -62,7 +62,8 @@
          <h4 class="w3-center">My Profile</h4>
          <p class="w3-center"><img src="https://pbs.twimg.com/profile_images/1919689960548139008/KESdylXb_400x400.jpg" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
          <hr>
-         <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i>Virtual Assisstant, Freelancer</p>
+         <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i>Programmer, Developer</p>
+           <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i>Virtual Assisstant, Freelancer</p>
          <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> Cebu City, PH</p>
          <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i> Since 2020</p>
         </div>
@@ -159,7 +160,7 @@
       <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
         <img src="https://pbs.twimg.com/profile_images/1919689960548139008/KESdylXb_400x400.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
         <span class="w3-right w3-opacity">1 min</span>
-        <h4>John Doe</h4><br>
+        <h4>Racque Cordeta</h4><br>
         <hr class="w3-clear">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           <div class="w3-row-padding" style="margin:0 -16px">
@@ -177,7 +178,7 @@
       <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
         <img src="https://pbs.twimg.com/profile_images/1919689960548139008/KESdylXb_400x400.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
         <span class="w3-right w3-opacity">16 min</span>
-        <h4>Jane Doe</h4><br>
+        <h4>Racque Cordeta</h4><br>
         <hr class="w3-clear">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button>
@@ -188,7 +189,7 @@
       <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
         <img src="https://pbs.twimg.com/profile_images/1919689960548139008/KESdylXb_400x400.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
         <span class="w3-right w3-opacity">32 min</span>
-        <h4>Angie Jane</h4><br>
+        <h4>Racque Cordeta</h4><br>
         <hr class="w3-clear">
         <p>Have you seen this?</p>
         <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%" class="w3-margin-bottom">
@@ -217,7 +218,7 @@
         <div class="w3-container">
           <p>Friend Request</p>
           <img src="https://pbs.twimg.com/profile_images/1919689960548139008/KESdylXb_400x400.jpg" alt="Avatar" style="width:50%"><br>
-          <span>Jane Doe</span>
+          <span>Francis Ipong</span>
           <div class="w3-row w3-opacity">
             <div class="w3-half">
               <button class="w3-button w3-block w3-green w3-section" title="Accept"><i class="fa fa-check"></i></button>
