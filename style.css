@@ -87,3 +87,18 @@ img { max-width: 100%; }
     .navbar { justify-content: space-between; }
     .nav-left::after { content: 'Mobile View'; font-size: 12px; color: #888; margin-left: 10px;}
 }
+
+/* --- RESPONSIVE MOBILE STYLES --- */
+@media (max-width: 900px) {
+    /* ... your existing mobile styles ... */
+
+    /* Hides the text inside the action buttons on mobile */
+    .action-item span {
+        display: none;
+    }
+    
+    /* Optional: Ensure the icon stays centered if you had margins on it */
+    .action-item img {
+        margin-right: 0;
+    }
+}
