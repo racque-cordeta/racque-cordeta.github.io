@@ -25,39 +25,68 @@ window.addEventListener("DOMContentLoaded", (event) => {
 //
 // Scripts
 //
-const contactForm = document.getElementById("contactForm");
+// const contactForm = document.getElementById("contactForm");
 
-contactForm.addEventListener("submit", async (e) => {
-  e.preventDefault(); // Stop the page from reloading
+// contactForm.addEventListener("submit", async (e) => {
+//   e.preventDefault(); // Stop the page from reloading
 
-  // 1. Gather data from the form fields
-  const formData = new FormData(contactForm);
+//   // 1. Gather data from the form fields
+//   const formData = new FormData(contactForm);
 
-  // 2. Convert FormData to a plain JSON object
-  const data = Object.fromEntries(formData.entries());
+//   // 2. Convert FormData to a plain JSON object
+//   const data = Object.fromEntries(formData.entries());
 
-  try {
-    // 3. Send the POST request with JSON headers
-    const response = await fetch(contactForm.action, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(data), // Turn the object into a JSON string
+//   try {
+//     // 3. Send the POST request with JSON headers
+//     const response = await fetch(contactForm.action, {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json",
+//         Accept: "application/json",
+//       },
+//       body: JSON.stringify(data), // Turn the object into a JSON string
+//     });
+
+//     if (response.ok) {
+//       alert("Message sent successfully!");
+//       contactForm.reset();
+//     } else {
+//       const errorData = await response.json();
+//       alert("Error: " + (errorData.error || "Submission failed"));
+//     }
+//   } catch (error) {
+//     alert("Network error. Please try again later.");
+//   }
+// });
+
+var form = document.getElementById("contactForm");
+
+async function handleSubmit(event) {
+  event.preventDefault();
+  var status = document.getElementById("submitSuccessMessage");
+  var errorStatus = document.getElementById("submitErrorMessage");
+  var data = new FormData(event.target);
+
+  fetch(event.target.action, {
+    method: form.method,
+    body: data,
+    headers: {
+      Accept: "application/json",
+    },
+  })
+    .then((response) => {
+      if (response.ok) {
+        status.classList.remove("d-none");
+        form.reset();
+      } else {
+        errorStatus.classList.remove("d-none");
+      }
+    })
+    .catch((error) => {
+      errorStatus.classList.remove("d-none");
     });
-
-    if (response.ok) {
-      alert("Message sent successfully!");
-      contactForm.reset();
-    } else {
-      const errorData = await response.json();
-      alert("Error: " + (errorData.error || "Submission failed"));
-    }
-  } catch (error) {
-    alert("Network error. Please try again later.");
-  }
-});
+}
+form.addEventListener("submit", handleSubmit);
 
 window.addEventListener("DOMContentLoaded", (event) => {
   // Navbar shrink function
