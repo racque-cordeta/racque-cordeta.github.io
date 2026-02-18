@@ -17,47 +17,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   document.addEventListener("scroll", navbarShrink);
 });
 
-/*!
- * Start Bootstrap - Freelancer v7.0.7 (https://startbootstrap.com/theme/freelancer)
- * Copyright 2013-2023 Start Bootstrap
- * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-freelancer/blob/master/LICENSE)
- */
-//
-// Scripts
-//
-// const contactForm = document.getElementById("contactForm");
-
-// contactForm.addEventListener("submit", async (e) => {
-//   e.preventDefault(); // Stop the page from reloading
-
-//   // 1. Gather data from the form fields
-//   const formData = new FormData(contactForm);
-
-//   // 2. Convert FormData to a plain JSON object
-//   const data = Object.fromEntries(formData.entries());
-
-//   try {
-//     // 3. Send the POST request with JSON headers
-//     const response = await fetch(contactForm.action, {
-//       method: "POST",
-//       headers: {
-//         "Content-Type": "application/json",
-//         Accept: "application/json",
-//       },
-//       body: JSON.stringify(data), // Turn the object into a JSON string
-//     });
-
-//     if (response.ok) {
-//       alert("Message sent successfully!");
-//       contactForm.reset();
-//     } else {
-//       const errorData = await response.json();
-//       alert("Error: " + (errorData.error || "Submission failed"));
-//     }
-//   } catch (error) {
-//     alert("Network error. Please try again later.");
-//   }
-// });
+// Contact form submission handling
 
 var form = document.getElementById("contactForm");
 
