@@ -11037,7 +11037,7 @@ html {
 
 /* Custom Active Highlight */
 #mainNav .navbar-nav li.nav-item a.nav-link.active {
-    color: #1abc9c !important; /* This matches the primary green theme color */
+    color: #ffffff !important; /* This matches the primary green theme color */
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 0.25rem;
 }
