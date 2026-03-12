@@ -11034,3 +11034,15 @@ html {
 .copyright {
   background-color: #1a252f;
 }
+
+/* Custom Active Highlight */
+#mainNav .navbar-nav li.nav-item a.nav-link.active {
+    color: #1abc9c !important; /* This matches the primary green theme color */
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 0.25rem;
+}
+
+/* Optional: Add a little transition for smoothness */
+#mainNav .nav-link {
+    transition: all 0.3s ease-in-out;
+}
